@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\alaza\awesome\c++ projects\tinyRayTracer\gui\src\window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\alaza\awesome\c++ projects\tinyRayTracer\gui\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{A66B5A47-4839-3ACE-82ED-8008B1CA8618}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,5 @@
+C:/Users/alaza/awesome/c++ projects/tinyRayTracer/build/CMakeFiles/main.dir
+C:/Users/alaza/awesome/c++ projects/tinyRayTracer/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/alaza/awesome/c++ projects/tinyRayTracer/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/alaza/awesome/c++ projects/tinyRayTracer/build/gui/CMakeFiles/window.dir
+C:/Users/alaza/awesome/c++ projects/tinyRayTracer/build/gui/CMakeFiles/ALL_BUILD.dir

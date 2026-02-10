@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/alaza/awesome/c++ projects/tinyRayTracer/build/cmake_install.cmake",
+		"C:/Users/alaza/awesome/c++ projects/tinyRayTracer/build/gui/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
