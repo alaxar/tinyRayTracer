@@ -11,7 +11,8 @@ public:
     // dot product
     double dot(const Vector3 &other) const;
 
-    int magnitude() const;
+    double magnitude() const;
+    double lengthSquared() const;
     
 private:
     double x, y, z;
