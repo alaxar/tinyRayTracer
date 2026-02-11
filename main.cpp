@@ -1,4 +1,4 @@
-#include "gui/include/window.h"
+#include "src/gui/include/window.h"
 
 int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd) {
     
