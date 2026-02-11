@@ -1,5 +1,5 @@
- #include "../include/window.h"
-
+#include "../include/window.h"
+#include <raytracer.h>
 bool isRunning = true;
 
 LRESULT CALLBACK Window::WndProc(HWND hwnd, UINT msg, WPARAM wp, LPARAM lp) {
@@ -15,7 +15,21 @@ LRESULT CALLBACK Window::WndProc(HWND hwnd, UINT msg, WPARAM wp, LPARAM lp) {
     return ret;
 }
 
-int Window::init(HINSTANCE hInst) {
+void Window::Run() {
+    MSG msg = {};
+    
+    while(isRunning) {
+        while(PeekMessage(&msg, hwnd, 0, 0, PM_REMOVE) > 0) {
+            TranslateMessage(&msg);
+            DispatchMessage(&msg);
+        }
+
+        // game loop here.
+        renderer.render();
+    }
+}
+
+Window::Window(HINSTANCE hinst, RayTracer& raytracer) : renderer(raytracer) {
     WNDCLASS wc = {sizeof(WNDCLASS)};
 
     wc.lpfnWndProc = Window::WndProc;
@@ -28,17 +42,7 @@ int Window::init(HINSTANCE hInst) {
         MessageBox(0, "Window Registration Failed!", "Error!", MB_ICONINFORMATION | MB_OK);
     }
 
-    HWND hwnd = CreateWindowExW(0, L"MyWindowClass", L"3D renderer", WS_OVERLAPPEDWINDOW | WS_VISIBLE, CW_USEDEFAULT, CW_USEDEFAULT, 800, 800, NULL, NULL, hInst, NULL);
+    hwnd = CreateWindowExW(0, L"MyWindowClass", L"3D renderer", WS_OVERLAPPEDWINDOW | WS_VISIBLE, CW_USEDEFAULT, CW_USEDEFAULT, 800, 800, NULL, NULL, hInst, NULL);
 
-    if(!hwnd) return -1;
-    
-    MSG msg = {};
-    
-    while(isRunning) {
-        while(PeekMessage(&msg, hwnd, 0, 0, PM_REMOVE) > 0) {
-            TranslateMessage(&msg);
-            DispatchMessage(&msg);
-        }
-    }
-    return 0;
+    if(!hwnd) return;
 }
