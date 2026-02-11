@@ -13,6 +13,7 @@ public:
 
     double magnitude() const;
     double lengthSquared() const;
+    Vector3 normalize() const;
     
 private:
     double x, y, z;

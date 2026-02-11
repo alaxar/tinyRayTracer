@@ -18,3 +18,14 @@ double Vector3::magnitude() const {
 double Vector3::lengthSquared() const {
     return x*x + y*y + z*z;
 }
+
+Vector3 Vector3::normalize() const {
+    double len = lengthSquared();
+
+    if(len == 0.0)
+        return Vector3(0.0f, 0.0f, 0.0f);
+
+    double invertedLength = 1.0 / std::sqrt(len);
+
+    return Vector3(x * invertedLength, y * invertedLength, z * invertedLength);
+}
