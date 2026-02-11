@@ -6,7 +6,7 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInstance, LPSTR lpCmdLine, in
     // Window window;
     // window.init(hInst);
     
-    Vector3 vec3;
+    Vector3 vec3 = {1, 2, 3};
 
     return 0;
 }
