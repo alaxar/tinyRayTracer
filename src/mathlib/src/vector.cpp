@@ -6,3 +6,7 @@ Vector3::Vector3() {
 }
 Vector3::Vector3(double x, double y, double z) : x(x), y(y), z(z) {}
 Vector3::~Vector3() {}
+
+double Vector3::dot(const Vector3 &other) const {
+    return x * other.x + y * other.y + z * other.z;
+}

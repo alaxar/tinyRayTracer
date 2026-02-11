@@ -1,4 +1,5 @@
 #pragma once
+#include <cmath>
 
 class Vector3
 {
@@ -8,9 +9,9 @@ public:
     ~Vector3();
 
     // dot product
-    double dot(const Vector3 &other) const {
-        return x * other.x + y * other.y + z * other.z;
-    }
+    double dot(const Vector3 &other) const;
+
+    int magnitude() const;
     
 private:
     double x, y, z;
