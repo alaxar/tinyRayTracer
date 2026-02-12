@@ -15,4 +15,5 @@ private:
     HINSTANCE hInst;
     RayTracer &renderer;
     HWND hwnd;
+    BITMAPINFO bmi = {};
 };

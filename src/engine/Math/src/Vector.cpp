@@ -1,4 +1,4 @@
-#include "../include/Vector.h"
+#include <Vector.h>
 #include <windows.h>
 
 Vector3::Vector3() {
